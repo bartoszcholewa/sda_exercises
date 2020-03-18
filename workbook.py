@@ -1,43 +1,68 @@
-def retmenu():
+# Funkcja powrotu do menu głównego
+def main_menu():
     input("ENTER aby wrócić...\n")
     workbookmenu()
 
-
+# Ćwiczenie 1 - rozbijanie danej liczby na sumy potęg 10
 def workbook1():
     print(
-        "[1] To ćwiczenie rozbija wpisaną wartość liczbową \n(w systemie dziesiętnym) na sumy kolejnych potęg liczby 10\n")
-    user_choice = int(input("Podaj liczbę całkowitą: "))
-    digits_number1 = len(str(user_choice))
-    digits_number2 = len(str(user_choice))
-    wynik = ""
-    wynik_int = 0
-    error = ""
+        "[1] To ćwiczenie rozbija wpisaną liczbę naturalną \n(w systemie dziesiętnym) na sumy kolejnych potęg liczby 10\n")
+    user_number = (input("Podaj liczbę całkowitą: "))
+
+    # Sprawdź czy użytkownik nie jest testerem
+    try:                                                                # Spróbuj przekształcić wprowadzoną wartość na liczbę
+        user_number = int(user_number)
+        if user_number >= 0:                                            # Jeśli się udało, sprawdź czy jest liczbą naturalną
+            pass
+        else:
+            print("Wartość musi być liczbą naturalną. Spróbuj ponownie 1 \n")
+            main_menu()
+    except:
+        print("Wartość musi być liczbą naturalną. Spróbuj ponownie 0 \n")
+        main_menu()
+
+    # OKREŚL WARTOŚĆ POTĘGI POCZĄTKOWEJ
+    # Podaną liczbę przekształć na tekst a później policz znaki w tekście,
+    digits_number1 = len(str(user_number))                              # Dla wyświetlenia pierwszego człona obliczeń
+    digits_number2 = len(str(user_number))                              # Dla obliczenia i wyświetlenia drugiego człona obliczeń
+
+    # Zdefiniuj typy zmiennych przed ich użyciem
+    string_result = ""                                                  # Zmienna wyniku w formie tekstowym - dla wyświetlenia
+    int_result = 0                                                      # Zmienna wyniku w formie liczbowym - dla obliczenia i wyświetlenia
+    error = ""                                                          # Zmienna tekstu o błędzie
+
+    # Testowanie zmiennych
     print(
-        f"Twoja liczba {user_choice} posiada {digits_number1} znaków, jej pierwszym znakiem jest {int(str(user_choice)[0])}")
-    for digit in str(user_choice):
-        digits_number1 -= 1
-        wynik += (f"{digit}x10^{digits_number1}")
-        if digits_number1 == 0:
-            wynik += (" = ")
-        else:
-            wynik += (" + ")
+        f"Twoja liczba {user_number} posiada {digits_number1} znaków, "
+        f"jej pierwszym znakiem jest liczba {str(user_number)[0]}")
 
-    for digit in str(user_choice):
-        digits_number2 -= 1
-        wynik_int += (int(digit) * 10 ** (int(digits_number2)))  # + 1 # Trigger math error!
-        wynik += str(int(digit) * 10 ** (int(digits_number2)))
-        if digits_number2 == 0:
-            if (int(user_choice) == wynik_int):
-                wynik += (f" = {wynik_int}")
-            else:
-                error = f"Błąd programu! Podana wartość {user_choice} nie jest równa wynikowi skryptu {wynik_int}"
+    # Sformułuj i wyświetl pierwszy człon obliczenia
+    for digit in str(user_number):                                      # Dla każdego znaku cyfry w tekście liczbowym
+        digits_number1 -= 1                                             # określ potęgę tej liczby w działaniu
+        string_result += (f"{digit}x10^{digits_number1}")               # i dodaj do tego znaku mnożnik dziesiętny do danej potęgi
+        if digits_number1 == 0:                                         # Sprawdź czy to ostatnia pętla
+            string_result += (" = ")                                    # Jeśli tak, zakończ równanie
         else:
-            wynik += (" + ")
+            string_result += (" + ")                                    # Jeśli nie, dodawaj dalej
 
-    if error:
-        print(error)
-    else:
-        print(wynik)
+    # Sformułuj, oblicz i wyświetl drugi człon obliczeń
+    for digit in str(user_number):                                      # Dla każdego znaku cyfry w tekście liczbowym
+        digits_number2 -= 1                                             # określ potęgę tej liczby w działaniu
+        int_result += (int(digit) * 10 ** (int(digits_number2)))        # wykonaj faktyczne obliczenie i dodaj do sumy poprzednich
+        string_result += str(int(digit) * 10 ** (int(digits_number2)))  # wykonaj faktyczne obliczenie i dodaj do zapisu obliczenia
+        if digits_number2 == 0:                                         # Sprawdź czy to ostatnia pętla
+            if (int(user_number) == int_result):                        # Jeśli tak, sprawdź poprawność obliczeń
+                string_result += (f" = {int_result}")                   # Jeśli poprane, dodaj wynik do wyświetlenia
+            else:                                                       # Jeśli błędne, określ błąd
+                error = f"Błąd programu! Podana wartość {user_number}" \
+                        f" nie jest równa wynikowi skryptu {int_result}"
+        else:                                                           # Jeśli to nie ostatnia pętla, dodawaj dalej
+            string_result += (" + ")
+
+    if error:                                                           # Spradź czy są jakieś określone błędy
+        print(error)                                                    # Jeśli tak, wyświetl je
+    else:                                                               # Jeśli nie, wyświetl dwuczłonowy zapis obliczenia z wynikiem
+        print(string_result)
 
 
 def workbook2():
@@ -162,10 +187,10 @@ def workbookmenu():
     user_choice = int(input("Wybór: "))
     if (user_choice == 1):
         workbook1()
-        retmenu()
+        main_menu()
     elif (user_choice == 2):
         workbook2()
-        retmenu()
+        main_menu()
     else:
         return
 
