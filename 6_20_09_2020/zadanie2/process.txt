@@ -1,0 +1,56 @@
+1. pip install -r requirenments.txt
+    - instalacja programow z listy wymagan
+
+2. pip list -o
+Package        Version Latest  Type
+-------------- ------- ------- -----
+idna           2.8     2.10    wheel
+ipython        7.6.0   7.18.1  wheel
+jedi           0.15.1  0.17.2  wheel
+pip            19.0.3  20.2.3  wheel
+prompt-toolkit 2.0.10  3.0.7   wheel
+requests       2.21.0  2.24.0  wheel
+setuptools     40.8.0  50.3.0  wheel
+urllib3        1.24.3  1.25.10 wheel
+
+- idna
+https://pypi.org/project/idna/
+Konwersja nazw domen na UTF-8
+
+- ipython
+https://pypi.org/project/ipython/
+Zestaw narzedzi rozszerzajacy funkcjonalnosc interaktywna pythona
+    - potezny interaktywny shell pythona
+    - rdzen pozwalajacy na prace w notebookach Jupitera i innych
+
+- jedi
+https://pypi.org/project/jedi/
+Wsparcie kodowania w IDE, autouzupelnianie, ulatwienia
+
+- pip
+https://pypi.org/project/pip/
+Instalator pakietow Python
+
+- prompt-toolkit
+https://pypi.org/project/prompt-toolkit/
+Narzedzie do pisania interaktywnych programow shellowskich
+
+- requests
+Narzedzie pozwalajace wysylanie i odbieranie zapytan HTTP
+
+- setuptools
+https://pypi.org/project/setuptools/
+Zarzadanie pakietami
+
+- urllib3
+https://pypi.org/project/urllib3/
+Klient HTTP
+
+4. pip search pylint
+    pip install pylint
+
+5. pylint
+https://pypi.org/project/pylint/
+Pylint is a Python static code analysis tool which looks for programming errors,
+helps enforcing a coding standard, sniffs for code smells and offers simple refactoring suggestions.
+

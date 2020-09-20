@@ -1,0 +1,24 @@
+Moduły
+from <module_name> import <klasa/zmienna/funkcja>
+PYTHONPATH=~/Desktop
+random.choice(list)
+
+Pakiety
+.pakiet -> szuka w tym miejscu
+..pakiet -> szuka pakiet wyzej
+
+Kolejność importowania:
+- biblioteki standardowe
+    [ENTER]
+- biblioteki zewnętrzne
+    [ENTER]
+- biblioteki projektu
+
+PIP
+pip freeze > requirements.txt
+    - tworzenie listy wymagan
+pip install -r requirenments.txt
+    - instalacja programow z listy wymagan
+
+Wazny modul - precommit
+
