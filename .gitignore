@@ -1,4 +1,10 @@
-/1_22-08-2020/venv/
-/1_22-08-2020/.idea/
+/d1_22-08-2020-podstawy/venv/
+/d1_22-08-2020-podstawy/.idea/
+/*/.idea/
 /venv/
-/.idea/
+*/.idea/*
+.idea/
+*.xml
+.gitignore
+.coverage
+.idea

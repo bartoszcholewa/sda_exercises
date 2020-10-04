@@ -15,13 +15,13 @@ class KontrolerPrzeklenstw(object):
 class KontrolerNaglowka(object):
     def __init__(self):
         self.nazwa = "Naglowek"
-	def control(self, plik):
+    def control(self, plik):
         o_file = open(plik, 'r')
         c_file = o_file.readline()
         o_file.close()
         if c_file.isupper():
             return {self.nazwa:True}
-	else:
+        else:
             return {self.nazwa:False}
 
 class KontrolerBasha(object):
@@ -38,9 +38,9 @@ class KontrolerBasha(object):
                 return {self.nazwa: False}
 
 class KontrolerTabulacji(object):
-def __init__(self):
+    def __init__(self):
         self.nazwa = 'Tabulatory'
-def control(self, plik):
+    def control(self, plik):
         if plik.endswith('.py'):
             o_file = open(plik, 'r')
             c_file = o_file.read(-1)
