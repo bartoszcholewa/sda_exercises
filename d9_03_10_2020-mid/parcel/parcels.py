@@ -1,4 +1,4 @@
-'''
+"""
 Zadanie 2:
 Utwórz i uzupełnij moduł parcels.py zgodnie z wymaganiami:
 
@@ -14,13 +14,15 @@ Parametrom, których nie ustawia bezpośrednio generator (sender_name, sender_or
 wartości domyślne None.
 Zmodyfikuj plik sender.py, by aktualizował pola sender_name i sender_origin każdej utworzonej
 paczki.
-'''
+"""
 import random
 import datetime
-from collections import namedtuple
 from dataclasses import dataclass
+
 destinations = ("Gdansk", "Gdynia", "Sopot")
 sizes = ("A", "B", "C")
+
+
 @dataclass
 class Parcel:
     destination: str
@@ -29,6 +31,7 @@ class Parcel:
     serial_number: int
     sender_name: str = None
     sender_origin: str = None
+
 
 def __parcel_generator():
     serial = 0
@@ -39,6 +42,7 @@ def __parcel_generator():
                      size=random.choice(sizes),
                      serial_number=serial)
         serial += 1
+
 
 parcel_generator = __parcel_generator()
 if __name__ == "__main__":

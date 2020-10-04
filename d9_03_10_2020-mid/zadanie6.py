@@ -1,8 +1,8 @@
-'''
+"""
 Zadanie 6.
 Zmodyfikuj funkcję z zadania 4. by przyjmowała dowolną liczbę argumentów. Przetestuj
 wywołanie dla różnych długości listy.
-'''
+"""
 a = [*range(100)]
 def zadanie4(*args):
     d = 0

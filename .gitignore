@@ -8,3 +8,4 @@
 .gitignore
 .coverage
 .idea
+__pycache__/

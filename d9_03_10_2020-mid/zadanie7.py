@@ -1,4 +1,4 @@
-'''
+"""
 Zadanie 7.
 Przygotuj funkcję wypisującą dane skazańca wg schematu:
 Imię Nazwisko
@@ -7,7 +7,7 @@ Cecha: wartość
 Cecha: wartość
 Cecha: wartość
 (dowolna ilość nazwanych cech)
-'''
+"""
 
 slownik = {"Wiek": 23,
            "Wzrost": 181,

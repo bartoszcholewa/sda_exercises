@@ -1,4 +1,4 @@
-'''
+"""
 Random
 Proste losowanie na potrzeby dalszych zadań:
 import random
@@ -7,7 +7,7 @@ random.random()
 Losowa liczba całkowita z przedziału <a, b>
 random.randint(a, b)
 Losowy element kolekcji
-'''
+"""
 import random
 print(random.random())
 print(random.randint(10, 20))

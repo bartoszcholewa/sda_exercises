@@ -7,14 +7,15 @@ dla danego n.
 działanie.
 '''
 
-mapped = map
-
 def czytaj_dalej(n):
     return lambda text : text[:n] + '..czytaj dalej' if len(text) > n else text
-do_dziesieciu_czytaj_dalej = czytaj_dalej(10)
-do_piedziesieciu_czytaj_dalej = czytaj_dalej(50)
 
-tekst = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
-print(do_dziesieciu_czytaj_dalej("Abecadlo"))
-print(do_dziesieciu_czytaj_dalej(tekst))
-print(do_piedziesieciu_czytaj_dalej(tekst))
+if __name__ == "__main__":
+    czytaj_10 = czytaj_dalej(20)
+    czytaj_50 = czytaj_dalej(50)
+
+    tekst10 = "Mniej niż 20 znaków."
+    tekst20 = "Ten tekst ma więcej niż 20 znaków"
+    print(czytaj_10("Mniej"))
+    print(czytaj_10(tekst10))
+    print(czytaj_10(tekst20))
