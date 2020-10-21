@@ -1,4 +1,4 @@
-pytest
+pytest~=6.0.2
 appdirs==1.4.4
 astroid==2.4.2
 backcall==0.2.0
@@ -28,3 +28,6 @@ urllib3==1.24.3
 virtualenv==20.0.31
 wcwidth==0.2.5
 wrapt==1.12.1
+
+freezegun~=1.0.0
+dataclasses~=0.7
