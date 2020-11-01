@@ -42,8 +42,8 @@ class SortingFacility:
             for parcel in parcels:
                 self.parcels_sorted_by_destination[destination].append(parcel)
 
-    # def log_parcels(self):
-    #     #pprint(dict(self.parcels_sorted_by_destination))
-    #     for city, parcels in self.parcels_sorted_by_destination.items():
-    #         print(f"City '{city}' has {len(parcels)} parcels")
+    def log_parcels(self):
+        #pprint(dict(self.parcels_sorted_by_destination))
+        for city, parcels in self.parcels_sorted_by_destination.items():
+            print(f"City '{city}' has {len(parcels)} parcels")
 

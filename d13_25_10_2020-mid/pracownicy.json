@@ -1,0 +1,41 @@
+{
+"Biedronka": [
+{
+"id": "1",
+"firstName": "Tom",
+"lastName": "Cruise",
+"salary": 3500
+},
+{
+"id": "2",
+"firstName": "Maria",
+"lastName": "Sharapova",
+"salary": 4700
+},
+{
+"id": "3",
+"firstName": "Robert",
+"lastName": "Downey Jr.",
+"salary": 5300
+}
+],
+"Żabka": [
+{
+"id": "1","firstName": "Tom",
+"lastName": "Cruise",
+"salary": 3600
+},
+{
+"id": "2",
+"firstName": "Maria",
+"lastName": "Sharapova",
+"salary": 4800
+},
+{
+"id": "3",
+"firstName": "Robert",
+"lastName": "Downey Jr.",
+"salary": 5400
+}
+]
+}
