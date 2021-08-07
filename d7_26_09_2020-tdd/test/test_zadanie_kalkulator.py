@@ -1,5 +1,5 @@
 import pytest
-from ..src.zadanie_kalkulator import ZadanieKalkulator
+from src.zadanie_kalkulator import ZadanieKalkulator
 
 class TestZadanieKalkulator():
 

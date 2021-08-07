@@ -1,5 +1,5 @@
 import pytest
-from ..src.fizzbuzz import fizz_buzz
+from src.fizzbuzz import fizz_buzz
 
 @pytest.mark.parametrize("x, result", [(0, 0), (1,1), (-3,0),
                                        (15, "FizzBuzz"), (45, "FizzBuzz"),

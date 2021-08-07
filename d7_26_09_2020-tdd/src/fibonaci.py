@@ -6,7 +6,7 @@ def fib(n): #iteracyjna
         a, b = b, c
     return a
 
-print(fib(10))
+#print(fib(10))
 
 def fib_re(n): #rekurencja
     if n == 0:

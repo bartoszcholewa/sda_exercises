@@ -1,4 +1,4 @@
-from ..src.primefactors import prime_factors
+from src.primefactors import prime_factors
 
 def test_one():
     assert prime_factors(1) == []

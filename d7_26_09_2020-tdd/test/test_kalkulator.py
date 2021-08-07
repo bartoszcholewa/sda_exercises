@@ -1,6 +1,6 @@
 import pytest
 import random
-from ..src.kalkulator import add_numbers
+from src.kalkulator import add_numbers
 
 class TestCalculator():
     def test_add_numbers(self):

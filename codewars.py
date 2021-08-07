@@ -1,0 +1,1 @@
+print(1 and 'odd' or 'even')

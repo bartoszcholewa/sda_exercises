@@ -1,5 +1,5 @@
 import pytest
-from ..src.sum_args import sum_arguments, capital_case
+from src.sum_args import sum_arguments, capital_case
 
 class TestSumArgs():
     def test_sum_below_max(self):
