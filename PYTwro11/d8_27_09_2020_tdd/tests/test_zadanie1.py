@@ -1,5 +1,5 @@
 import pytest
-from d8_27_09_2020.src.zadanie1 import Product, Warehouse, ProductError
+from PYTwro11.d8_27_09_2020_tdd.zadanie1 import Product, Warehouse, ProductError
 
 #TODO:
 # -check if volume is negative,

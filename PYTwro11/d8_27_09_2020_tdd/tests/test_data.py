@@ -1,5 +1,5 @@
 import pytest
-from ..src.data import Data
+from PYTwro11.d8_27_09_2020_tdd.data import Data
 from unittest import TestCase
 
 # @pytest.fixture()

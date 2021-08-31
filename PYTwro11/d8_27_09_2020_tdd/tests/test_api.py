@@ -1,7 +1,5 @@
-import sys, os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..',))
 from unittest.mock import patch, MagicMock
-from src.api import API, get_only_numbers
+from PYTwro11.d8_27_09_2020_tdd.api import API, get_only_numbers
 
 
 def test_read_only_numbers():
@@ -12,7 +10,7 @@ def test_read_only_numbers():
 
     fake_api = MagicMock()
     fake_api.get_data.return_value = test_data #  mockowanie metody get_data
-    with patch('src.api.API', fake_api):
+    with patch('PYTwro11.d8_27_09_2020_tdd.api.API', fake_api):
         # patch podmienia obiekt oryginalny a context manager określa zakres używania mocka
         result = get_only_numbers()
         assert result == expected

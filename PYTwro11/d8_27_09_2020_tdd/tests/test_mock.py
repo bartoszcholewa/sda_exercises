@@ -1,8 +1,7 @@
 import sys, os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..',))
 import pytest
 from unittest.mock import patch, MagicMock
-from src.mock import User
+from PYTwro11.d8_27_09_2020_tdd.mock import User
 
 def test_return_available_funds():
     fake_account1 = MagicMock()
